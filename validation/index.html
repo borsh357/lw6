@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Validation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <h1>Registration</h1>
+  <div class="registration">
+    <form class="registration-form">
+
+      <div class="row">
+        <div class="col-4">
+          Full name:
+        </div>
+        <div class="col-8">
+          <input class="registration-form__input input-full-name" type="text" placeholder="Ivanov Ivan">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-4">
+          E-mail:
+        </div>
+        <div class="col-8">
+          <input class="registration-form__input input-email" type="text" placeholder="example@gmail.com">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-4">
+          City:
+        </div>
+        <div class="col-8">
+          <select class="registration-form__input input-city">
+            <option>Moscow</option>
+            <option>St. Petersburg</option>
+            <option selected>Yoshkar-Ola</option>
+            <option>New York</option>
+            <option>Miami</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-4">
+          Password:
+        </div>
+        <div class="col-8">
+          <input class="registration-form__input input-password" type="password" placeholder="Ivanov Ivan">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12 text-center">
+          <button class="registration-form__submit">Send</button>
+        </div>
+      </div>
+
+    </form>
+  </div>
+  <script src="validation.js"></script>
+</body>
+
+</html>
