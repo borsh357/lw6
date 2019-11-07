@@ -2,15 +2,21 @@ var chatBody = document.getElementsByClassName('chat-body')[0];
 var input = document.getElementsByClassName('chat-input__textarea')[0];
 
 function botResponse() {
-  var messageText = '<p><strong>Joe Mama</strong></p>I am a stupid chat bot and I can\'t reply to your message right now, but I hope some day I will be able to...';
-  var messageBody = '<div class="chat-body__message chat-body__message--reply">' + messageText + '</div>'
+  var messageText =
+    '<p><strong>Joe Mama</strong></p>I am a stupid chat bot and I can\'t reply to your message right now, but I hope some day I will be able to...';
+  var messageBody =
+    '<div class="row"><div class="chat-body__message chat-body__message--reply">' +
+    messageText +
+    '</div></div>'
   chatBody.innerHTML += messageBody;
 }
 
 function sendMessage() {
-  var messageText = '<p><strong>You</strong></p>' + input.value;
+  var messageText = input.value.trim();
   if (messageText.length === 0) return;
-  var messageBody = '<div class="chat-body__message chat-body__message--sent">' + messageText + '</div>'
+  var messageBody =
+    '<div class="row"><div class="chat-body__message chat-body__message--sent"><p><strong>You</strong></p>' +
+    messageText + '</div></div>'
   chatBody.innerHTML += messageBody;
   botResponse();
   chatBody.scrollTop = 999999;

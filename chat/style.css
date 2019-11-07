@@ -61,8 +61,10 @@ body {
 }
 
 .chat-body__message {
-  width: 80%;
+  width: auto;
+  max-width: 80%;
   margin-bottom: 15px;
+  word-wrap: break-word;
 }
 
 .chat-body__message--reply {
@@ -79,4 +81,9 @@ body {
   padding: 5px 10px;
   border: 1px #c5e1fc solid;
   border-radius: 10px;
+}
+
+.row {
+  width: 100%;
+  min-height: 100px;
 }
