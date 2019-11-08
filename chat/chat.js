@@ -1,24 +1,20 @@
 var chatBody = document.getElementsByClassName('chat-body')[0];
 var input = document.getElementsByClassName('chat-input__textarea')[0];
 
-function botResponse() {
-  var messageText =
-    '<p><strong>Joe Mama</strong></p>I am a stupid chat bot and I can\'t reply to your message right now, but I hope some day I will be able to...';
-  var messageBody =
-    '<div class="row"><div class="chat-body__message chat-body__message--reply">' +
-    messageText +
-    '</div></div>'
-  chatBody.innerHTML += messageBody;
-}
-
-function sendMessage() {
-  var messageText = input.value.trim();
+function sendMessage(messageText, from) {
+  if (!messageText) var messageText = input.value;
+  messageText = messageText.trim();
   if (messageText.length === 0) return;
-  var messageBody =
-    '<div class="row"><div class="chat-body__message chat-body__message--sent"><p><strong>You</strong></p>' +
-    messageText + '</div></div>'
+  if (!from) {
+    var messageBody =
+      '<div class="row"><div class="chat-body__message chat-body__message--sent"><div class="message-author"><p>You</p></div>' +
+      messageText + '</div></div>'
+  } else {
+    var messageBody =
+      '<div class="row"><div class="chat-body__message chat-body__message--reply"><div class="message-author"><p>' +
+      from + '</p></div>' + messageText + '</div></div>'
+  }
   chatBody.innerHTML += messageBody;
-  botResponse();
   chatBody.scrollTop = 999999;
 }
 
@@ -33,3 +29,8 @@ input.addEventListener('keypress', function(e) {
     resetInput();
   }
 })
+
+document.getElementsByClassName('chat-input__send')[0].onclick = function() {
+  sendMessage();
+  resetInput();
+}

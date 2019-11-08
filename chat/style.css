@@ -67,6 +67,10 @@ body {
   word-wrap: break-word;
 }
 
+.message-author {
+  font-weight: bold;
+}
+
 .chat-body__message--reply {
   float: left;
   background: rgba(255, 252, 189, 0.7);
@@ -85,5 +89,5 @@ body {
 
 .row {
   width: 100%;
-  min-height: 100px;
+  display: inline-block;
 }

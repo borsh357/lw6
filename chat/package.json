@@ -6,13 +6,13 @@
   "watch": {
     "validate-html": "index.html",
     "validate-css": "style.css",
-    "jshint": "main.js"
+    "jshint": "chat.js"
   },
   "scripts": {
     "server": "live-server",
     "validate-html": "html-validate index.html",
     "validate-css": "css-validator style.css",
-    "jshint": "jshint main.js",
+    "jshint": "jshint chat.js",
     "watch": "npm-watch",
     "postinstall": "npm i -g live-server css-validator html-validate jshint"
   },

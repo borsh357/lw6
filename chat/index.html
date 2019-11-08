@@ -14,14 +14,18 @@
     <div class="chat-body">
       <div class="row">
         <div class="chat-body__message chat-body__message--reply">
-          <p><strong>Joe Mama</strong></p>
-          Hello! I'm your chat bot and I'll try to reply your messages. Write me something!
+          <div class="message-author">
+            <p>Joe Mama</p>
+          </div>
+          <div>
+            <p>Hello! I'm your chat bot and I'll try to reply your messages. Write me something!</p>
+          </div>
         </div>
       </div>
     </div>
     <div class="chat-input">
       <textarea class="chat-input__textarea" rows="7" placeholder="Type your message"></textarea>
-      <button class="chat-input__send" onclick="sendMessage(); resetInput();">Send</button>
+      <button class="chat-input__send">Send</button>
     </div>
   </div>
   <script src="chat.js"></script>
